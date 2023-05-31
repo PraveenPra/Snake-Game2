@@ -7,11 +7,13 @@ public class SnakeController : MonoBehaviour
     public float moveSpeed = 5;
     public float steerSpeed = 100;
     public GameObject BodyPrefab;
-    private int gap = 30;
-    private float bodySpeed = 3;
+    public FoodSpawner food_spawner;
+
+    private int gap = 20;
+    private float bodySpeed = 5;
     private List<GameObject> BodyParts = new List<GameObject>();
     private List<Vector3> HeadPositionHistory = new List<Vector3>();
-    // Start is called before the first frame update
+
     void Start()
     {
         GrowSnake();
@@ -26,6 +28,10 @@ public class SnakeController : MonoBehaviour
         //steer
         float steerDir = Input.GetAxis("Horizontal");
         transform.Rotate(Vector3.up * steerDir * steerSpeed * Time.deltaTime);
+
+        //To fly
+        // float flyDir = Input.GetAxis("Vertical");
+        // transform.Rotate(Vector3.left * flyDir * steerSpeed * Time.deltaTime);
 
         //store snake head positions
         HeadPositionHistory.Insert(0, transform.position);
@@ -49,7 +55,26 @@ public class SnakeController : MonoBehaviour
 
     private void GrowSnake()
     {
-        GameObject body = Instantiate(BodyPrefab);
+        GameObject body = Instantiate(BodyPrefab, transform.position, transform.rotation);
         BodyParts.Add(body);
+    }
+
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Food"))
+        {
+            Destroy(other.gameObject);
+
+            GrowSnake();
+
+            food_spawner.triggerSpawn = true;
+        }
+
+        if (other.gameObject.CompareTag("Wall"))
+        {
+            // Rotate the snake slightly
+            transform.Rotate(Vector3.up, 20);
+        }
     }
 }
