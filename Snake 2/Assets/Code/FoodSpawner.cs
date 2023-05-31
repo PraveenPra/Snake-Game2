@@ -5,59 +5,64 @@ using UnityEngine;
 public class FoodSpawner : MonoBehaviour
 {
     public GameObject FoodPrefab;
+    public GameObject PowerUpFoodPrefab;
     public GameObject ground;
-    public float maxTime = 10;
-    public float counter = 0;
+    private float powerupDelay = 25;
+    private float powerupCounter = 0;
     private float offset = 4f;
     public bool triggerSpawn = false;
+    private GameObject item;
 
-    void Start() {
-          SpawnFood();
+    void Start()
+    {
+        SpawnFood("NormalFood");
     }
-    
+
     void Update()
     {
-        counter += Time.deltaTime;
+        powerupCounter += Time.deltaTime;
 
-        if(triggerSpawn == true){
+        if (triggerSpawn == true)
+        {
             triggerSpawn = false;
-            SpawnFood();
+            SpawnFood("NormalFood");
         }
 
-        // if (counter > maxTime)
-        // {
-        //     SpawnFood();
-        //     counter = 0;
-        // }
+        if (powerupCounter > powerupDelay)
+        {
+            SpawnFood("PowerUpFood");
+            powerupCounter = 0;
+        }
     }
 
-    private void SpawnFood(){
-          GameObject egg = Instantiate(FoodPrefab, Vector3.zero, Quaternion.identity);
+    private void SpawnFood(string foodtype)
+    {
+        if(foodtype == "NormalFood"){
+             item = FoodPrefab;
+        }else{
+              item = PowerUpFoodPrefab;
+        }
 
-    // Get a random position within a defined area or range
-    Vector3 randomPosition = GetRandomPosition();
 
-    // Set the position of the spawned egg
-    egg.transform.position = randomPosition;
+        GameObject egg = Instantiate(item, Vector3.zero, Quaternion.identity);
+
+        // Get a random position within a defined area or range
+        Vector3 randomPosition = GetRandomPosition();
+
+        // Set the position of the spawned egg
+        egg.transform.position = randomPosition;
     }
 
     private Vector3 GetRandomPosition()
     {
-        // Define the range or area where the eggs can spawn on the ground
-        float minX = ground.transform.position.x - ground.transform.localScale.x / 2f;
-        float maxX = ground.transform.position.x + ground.transform.localScale.x / 2f;
-        float minY = ground.transform.position.y;
-        // float maxY = ground.transform.position.y + FoodPrefab.transform.localScale.y / 2f;
-        float minZ = ground.transform.position.z - ground.transform.localScale.z / 2f;
-        float maxZ = ground.transform.position.z + ground.transform.localScale.z / 2f;
+        Bounds groundBounds = ground.GetComponent<Renderer>().bounds;
 
         // Generate random coordinates within the defined range
-        float randomX = Random.Range(minX + offset, maxX - offset);
-        float Y = minY;
-        float randomZ = Random.Range(minZ + offset, maxZ - offset);
+        float randomX = Random.Range(groundBounds.min.x + offset, groundBounds.max.x - offset);
+        float randomZ = Random.Range(groundBounds.min.z + offset, groundBounds.max.z - offset);
 
         // Create and return the random position
-        return new Vector3(randomX , Y + 1.5f, randomZ );
+        return new Vector3(randomX, groundBounds.min.y + 1.5f, randomZ);
     }
 
 }

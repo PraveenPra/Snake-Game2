@@ -9,14 +9,17 @@ public class SnakeController : MonoBehaviour
     public GameObject BodyPrefab;
     public FoodSpawner food_spawner;
 
+
     private int gap = 20;
     private float bodySpeed = 5;
     private List<GameObject> BodyParts = new List<GameObject>();
     private List<Vector3> HeadPositionHistory = new List<Vector3>();
 
+
     void Start()
     {
         GrowSnake();
+
     }
 
     // Update is called once per frame
@@ -76,5 +79,34 @@ public class SnakeController : MonoBehaviour
             // Rotate the snake slightly
             transform.Rotate(Vector3.up, 20);
         }
+
+        if (other.gameObject.CompareTag("PowerUpFood"))
+        {
+            Destroy(other.gameObject);
+
+            SpeedUp();
+
+        }
+    }
+
+    private void SpeedUp()
+    {
+         float timer = 0;
+    moveSpeed += 2;
+    timer += Time.deltaTime;
+
+    bool isActive = timer <= 8;
+
+    foreach (var bodyPart in BodyParts)
+    {
+        GameObject speedUpChild = bodyPart.transform.Find("SpeedUp")?.gameObject;
+        speedUpChild?.SetActive(isActive);
+    }
+
+    if (!isActive)
+    {
+        timer = 0;
+        moveSpeed -= 2;
+    }
     }
 }
