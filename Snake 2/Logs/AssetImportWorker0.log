@@ -1,0 +1,243 @@
+Using pre-set license
+Built from '2021.2/staging' branch; Version is '2021.2.7f1 (6bd9e232123f) revision 7068130'; Using compiler version '192829333'; Build Type 'Release'
+OS: 'Windows 10  (10.0.19045) 64bit Professional' Language: 'en' Physical Memory: 8072 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
+
+COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\2021.2.7f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker0
+-projectPath
+C:/Users/home/Desktop/Praveen/unity proj/Snake-Game/Snake 2
+-logFile
+Logs/AssetImportWorker0.log
+-srvPort
+56826
+Successfully changed project path to: C:/Users/home/Desktop/Praveen/unity proj/Snake-Game/Snake 2
+C:/Users/home/Desktop/Praveen/unity proj/Snake-Game/Snake 2
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gfx=262144"
+Refreshing native plugins compatible for Editor in 103.59 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2021.2.7f1 (6bd9e232123f)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2021.2.7f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/home/Desktop/Praveen/unity proj/Snake-Game/Snake 2/Assets
+GfxDevice: creating device client; threaded=0; jobified=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: Intel(R) HD Graphics 5500 (ID=0x1616)
+    Vendor:   Intel
+    VRAM:     4036 MB
+    Driver:   20.19.15.4835
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2021.2.7f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2021.2.7f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/2021.2.7f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56412
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.2.7f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.2.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.2.7f1/Editor/Data/PlaybackEngines/LinuxStandaloneSupport/UnityEditor.LinuxStandalone.Extensions.dll
+Registered in 0.030216 seconds.
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 102.74 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.498 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1499ms)
+		BeginReloadAssembly (674ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (0ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (1ms)
+		EndReloadAssembly (667ms)
+			LoadAssemblies (667ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (163ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (42ms)
+			SetupLoadedEditorAssemblies (370ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (36ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (103ms)
+				BeforeProcessingInitializeOnLoad (2ms)
+				ProcessInitializeOnLoadAttributes (164ms)
+				ProcessInitializeOnLoadMethodAttributes (64ms)
+				AfterProcessingInitializeOnLoad (0ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (0ms)
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.015299 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\home\Desktop\Praveen\unity proj\Snake-Game\Snake 2\Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\home\Desktop\Praveen\unity proj\Snake-Game\Snake 2\Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.64 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.627 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1628ms)
+		BeginReloadAssembly (195ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (8ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (31ms)
+		EndReloadAssembly (1253ms)
+			LoadAssemblies (163ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (413ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (87ms)
+			SetupLoadedEditorAssemblies (565ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (31ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (124ms)
+				ProcessInitializeOnLoadAttributes (356ms)
+				ProcessInitializeOnLoadMethodAttributes (30ms)
+				AfterProcessingInitializeOnLoad (22ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (12ms)
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.08 seconds
+Refreshing native plugins compatible for Editor in 1.09 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3213 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 26 unused Assets / (112.1 KB). Loaded Objects now: 3669.
+Memory consumption went from 111.9 MB to 111.8 MB.
+Total: 4.860500 ms (FindLiveObjects: 0.334000 ms CreateObjectMapping: 0.352900 ms MarkObjects: 4.012800 ms  DeleteObjects: 0.159500 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 171828.940433 seconds.
+  path: Assets
+  artifactKey: Guid(00000000000000001000000000000000) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets using Guid(00000000000000001000000000000000) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '79842766b460edbeab6a34051e857a80') in 0.010650 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.189077 seconds.
+  path: Assets/Materials
+  artifactKey: Guid(36665e469c2a0004dac040e3f0cd6023) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials using Guid(36665e469c2a0004dac040e3f0cd6023) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bd4088e65fa59a8a72b3e9823f970112') in 0.006777 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 19.154247 seconds.
+  path: Assets/Materials/Ground Green.mat
+  artifactKey: Guid(9ae9e5d00c823a84db1a62f4b4e54ce9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Ground Green.mat using Guid(9ae9e5d00c823a84db1a62f4b4e54ce9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dcb612da44b36ff6cebabe7dc9553494') in 0.542898 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 74.801566 seconds.
+  path: Assets/Materials/Ground Brown.mat
+  artifactKey: Guid(c0429ebce293c024a910d65ce913a1ef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Ground Brown.mat using Guid(c0429ebce293c024a910d65ce913a1ef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2b13d89c95e5981ba10c82395bb72182') in 0.026586 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 142.715984 seconds.
+  path: Assets/Materials/Ground Brown.mat
+  artifactKey: Guid(c0429ebce293c024a910d65ce913a1ef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Ground Brown.mat using Guid(c0429ebce293c024a910d65ce913a1ef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c37da0180db9275ad9d3389c1254facd') in 0.031865 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000061 seconds.
+  path: Assets/Materials/Ground Green.mat
+  artifactKey: Guid(9ae9e5d00c823a84db1a62f4b4e54ce9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Ground Green.mat using Guid(9ae9e5d00c823a84db1a62f4b4e54ce9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c5ea0299e76e0e6e04911659212a9255') in 0.032968 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 229.410497 seconds.
+  path: Assets/Materials/Ground Green 1.mat
+  artifactKey: Guid(9ead1cbfbc83d934dbab4c7e1a97d894) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Ground Green 1.mat using Guid(9ead1cbfbc83d934dbab4c7e1a97d894) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3b68c8f491887109708cefdcc14f237b') in 0.031755 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 18.191162 seconds.
+  path: Assets/Materials/Snake color.mat
+  artifactKey: Guid(9ae9e5d00c823a84db1a62f4b4e54ce9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Snake color.mat using Guid(9ae9e5d00c823a84db1a62f4b4e54ce9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fa94dcf0cac72bbc52cd610825f18421') in 0.030011 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 34.704934 seconds.
+  path: Assets/Materials/Snake color 1.mat
+  artifactKey: Guid(3aeef9d7a34e0504089529f618530368) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Snake color 1.mat using Guid(3aeef9d7a34e0504089529f618530368) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7b48b89827f171ef7d42fb5c95ea6c8b') in 0.039806 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000047 seconds.
+  path: Assets/Materials/Snake color.mat
+  artifactKey: Guid(9ae9e5d00c823a84db1a62f4b4e54ce9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Snake color.mat using Guid(9ae9e5d00c823a84db1a62f4b4e54ce9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bb17a6331353fe8e09d59095e8ec9911') in 0.033997 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 36.409627 seconds.
+  path: Assets/Materials/Snake tongue.mat
+  artifactKey: Guid(3aeef9d7a34e0504089529f618530368) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Snake tongue.mat using Guid(3aeef9d7a34e0504089529f618530368) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '852c406fa0c80f928efdc626b64c1b7e') in 0.027307 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 99.465943 seconds.
+  path: Assets/Prefabs
+  artifactKey: Guid(b36a32ab190d23c498ed9f744f54abcc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs using Guid(b36a32ab190d23c498ed9f744f54abcc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9e9c31e1045d94a8110d6e88aae2ac93') in 0.006867 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 6.279133 seconds.
+  path: Assets/Prefabs/Body.prefab
+  artifactKey: Guid(8b16a688a43e6f747bade1f3cd222921) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Body.prefab using Guid(8b16a688a43e6f747bade1f3cd222921) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9a8fb29e639d3cdf7346ceb97beef023') in 0.060302 seconds 
