@@ -4,17 +4,16 @@ using UnityEngine;
 
 public class PowerUpController : MonoBehaviour
 {
-    public GameObject Snake;
-    
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    // private void OnTriggerEnter2D(Collider2D other) {
+    //     if(other.CompareTag("Player")){
+    //         powerup(other);
+    //     }
+    // }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    // private void powerup(Collider2D player){
+
+    //     SnakeController snake = player.GetComponent<SnakeController>();
+
+
+    // }
 }

@@ -8,7 +8,7 @@ public class SnakeController : MonoBehaviour
     public float steerSpeed = 100;
     public GameObject BodyPrefab;
     public FoodSpawner food_spawner;
-
+    private float powerupTimer = 5;
 
     private int gap = 20;
     private float bodySpeed = 5;
@@ -54,12 +54,15 @@ public class SnakeController : MonoBehaviour
             index++;
 
         }
+
+        Debug.Log(gap);
     }
 
     private void GrowSnake()
     {
         GameObject body = Instantiate(BodyPrefab, transform.position, transform.rotation);
         BodyParts.Add(body);
+        Debug.Log("eaten");
     }
 
 
@@ -91,22 +94,37 @@ public class SnakeController : MonoBehaviour
 
     private void SpeedUp()
     {
-         float timer = 0;
-    moveSpeed += 2;
-    timer += Time.deltaTime;
+        
+        float speedIncrease = 2;
 
-    bool isActive = timer <= 8;
+        moveSpeed += speedIncrease;
+        bodySpeed += speedIncrease;
+        gap += (int)speedIncrease;
 
-    foreach (var bodyPart in BodyParts)
-    {
-        GameObject speedUpChild = bodyPart.transform.Find("SpeedUp")?.gameObject;
-        speedUpChild?.SetActive(isActive);
+        foreach (var bodyPart in BodyParts)
+        {
+            GameObject speedUpChild = bodyPart.transform.Find("SpeedUp")?.gameObject;
+            speedUpChild?.SetActive(true);
+        }
+
+        StartCoroutine(ResetSpeed(speedIncrease));
+
     }
 
-    if (!isActive)
+    private IEnumerator ResetSpeed(float speedIncrease)
     {
-        timer = 0;
-        moveSpeed -= 2;
-    }
+        yield return new WaitForSeconds(5);
+
+        moveSpeed -= speedIncrease;
+        bodySpeed -= speedIncrease;
+
+        // Reset the gap between body parts
+        gap -= (int)speedIncrease;
+
+        foreach (var bodyPart in BodyParts)
+        {
+            GameObject speedUpChild = bodyPart.transform.Find("SpeedUp")?.gameObject;
+            speedUpChild?.SetActive(false);
+        }
     }
 }
